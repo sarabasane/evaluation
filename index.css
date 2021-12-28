@@ -1,0 +1,53 @@
+body {
+  background-color: white;
+  color: blue;
+  font-weight: bold;
+  text-align: center;
+}
+
+/** Transformation du pointeur et organisation des logos*/
+.logoGle {
+  cursor: crosshair;
+  display: none;
+  height: 100px;
+  left: 100px;
+  margin: 50px;
+  position: absolute;
+  right: 100px;
+  top: 100px;
+  width: 100px;
+}
+
+/** Disposition du 1er logo*/
+.img1 {
+  display: flex;
+}
+
+/** Style du conteneur*/
+.conteneurScore {
+  align-items: center;
+  background-color: blue;
+  border: 2px solid white;
+  border-radius: 10px;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  height: 15%;
+  position: fixed;
+  right: 5%;
+  top: 5%;
+  width: 15%;
+}
+
+/** Organisation des informations contenues dans le tableau de score*/
+#tableauScore {
+  font-size: 1.5em;
+  padding: 5px;
+}
+
+/** Style du tableau de score*/
+#compteurScore {
+  color: white;
+  font-size: 3.1em;
+  font-weight: bolder;
+}
