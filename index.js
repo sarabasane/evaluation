@@ -11,17 +11,7 @@ const $logo7 = $(".img7");
 const $logo8 = $(".img8");
 const $logo9 = $(".img9");
 
-const tabLogo = [
-  $logo1,
-  $logo2,
-  $logo3,
-  $logo4,
-  $logo5,
-  $logo6,
-  $logo7,
-  $logo8,
-  $logo9,
-];
+const tabLogo = [$logo1,$logo2,$logo3,$logo4,$logo5,$logo6,$logo7,$logo8,$logo9,];
 
 let compteurClick = 0;
 
@@ -38,6 +28,7 @@ $logo9.css("display", "none");
 
 /** Fonction d'affichage des logos par incrémentation*/
 const action = function () {
+
   $logogeneral.click(function () {
     compteurClick++;
 
@@ -76,9 +67,7 @@ const action = function () {
     }
     if (compteurClick == 9) {
       $logo9.css("display", "none");
-      alert(
-        "Félicitations, tu as découvert mon trésor; les compétences que j'ai à t'offrir !"
-      );
+      alert("Félicitations, tu as découvert mon trésor; les compétences que j'ai à t'offrir !");
     }
     captureLogo();
     disparitionLogo();
@@ -97,13 +86,13 @@ const captureLogo = function () {
 
 /** Fonction de calcul des positions maximale d'affichage*/
 const getRandomNum = function (num) {
-  return Math.ceil(Math.random() * 650 + 1);
+  return Math.floor(Math.random() * 1010 + 1);
 };
 
 /** Fonction d'affichage aléatoire des logos sur la page*/
 const disparitionLogo = function () {
-  const w = getRandomNum / "px";
-  const h = getRandomNum / "px";
+  const w = getRandomNum(850) + "px";
+  const h = getRandomNum(850) + "px";
   $logogeneral.css("left", w);
   $logogeneral.css("top", h);
 };
